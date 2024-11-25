@@ -1,0 +1,117 @@
+<html>
+  <body>
+    <h1>
+      ⛅
+      <br />
+      Currently 21° in Tokyo
+      <br />
+    </h1>
+    <h2>13° / <strong>23°</strong></h2>
+
+    <p>
+      🌧️ <strong>Tomorrow</strong>
+      <br />
+      <br />
+      <span class="temperature">10° / <strong>22°</strong> </span>
+    </p>
+
+    <p>
+      🌥️<strong>Saturday</strong>
+      <br />
+      <br />
+      <span class="temperature">15° / <strong>17°</strong> </span>
+    </p>
+
+    <p>
+      ☀️ <strong>Sunday</strong>
+      <br />
+      <br />
+      <span class="temperature">25° / <strong>28°</strong> </span>
+    </p>
+
+    <button>Change City</button>
+    <br />
+    <br />
+    <span class="closing">Coded by Nadira Dwiputri Lase</span>
+  </body>
+
+  <style>
+    body {
+      text-align: center;
+    }
+
+    h1 {
+      color: rgb(26, 87, 207);
+    }
+
+    h2 {
+      font-weight: normal;
+    }
+
+    .header {
+      font-size: 24px;
+    }
+
+    p {
+      background: white;
+      border: none;
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .temperature {
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    button {
+      color: white;
+      background: rgb(26, 87, 207);
+      border: 1px solid rgb(26, 87, 207);
+      border-radius: 23px;
+      padding: 17px;
+    }
+
+    .information:hover {
+      background: rgba(253, 209, 79, 10%);
+      border: 0px;
+      border-radius: 10px;
+      border-width: 10px;
+    }
+
+    p:hover {
+      background: rgba(253, 209, 79, 10%);
+      margin-left: 400px;
+      margin-right: 400px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .button:hover {
+      background: maroon;
+      color: white;
+    }
+
+    .closing {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 14px;
+    }
+  </style>
+
+  <script>
+    function changeCity() {
+      let city = prompt("Where is your current location?");
+      let weather = prompt("What's the temperature?");
+      let heading = document.querySelector("h1");
+
+      if (weather > 0) {
+        heading.innerHTML = `😀 <br /> Currently ${weather}° in ${city}`;
+      } else {
+        heading.innerHTML = `😿 <br /> Currently ${weather}° in ${city}`;
+      }
+    }
+
+    changeButton = document.querySelector("button");
+    changeButton.addEventListener("click", changeCity);
+  </script>
+</html>
